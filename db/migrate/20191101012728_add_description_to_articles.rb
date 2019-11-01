@@ -6,3 +6,4 @@ class AddDescriptionToArticles < ActiveRecord::Migration[6.0]
     add_column :articles, :title, :string
   end
 end
+#
