@@ -15,7 +15,7 @@ class ArticlesController < ApplicationController
         
         #Checking to make sure validations go through
         if @article.save 
-            flash[:notice] = "The article was successfully submitted."
+            flash[:success] = "The article was successfully submitted."
             redirect_to article_path(@article)
         else
 
@@ -36,7 +36,7 @@ class ArticlesController < ApplicationController
     def update
          @article = Article.find(params[:id])
         if @article.update(article_params)
-            flash[:notice] = "The article was successfully updated."
+            flash[:success] = "The article was successfully updated."
             redirect_to article_path(@article)
         else
             render 'edit'
@@ -46,7 +46,7 @@ class ArticlesController < ApplicationController
     def destroy
         @article = Article.find(params[:id])
         @article.destroy
-        flash[:notice] = "Article was successfully deleted."
+        flash[:danger] = "Article was successfully deleted."
         redirect_to articles_path
     end
     
