@@ -28,5 +28,8 @@
     padding-top: 5px;
     padding-bottom: 20px;
 }
+.jumbotron {
+    background-image: url('/assets/Slide1');
+}
 @import "~bootstrap/scss/bootstrap"; // never forget the semicolon at the end
 
