@@ -1,0 +1,7 @@
+//= require_self
+@import "~bootstrap/scss/bootstrap"; // never forget the semicolon at the end
+@import "./_custom";
+
+h1 { 
+  color: blue;
+}
