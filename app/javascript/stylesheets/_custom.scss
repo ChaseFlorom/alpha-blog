@@ -31,5 +31,33 @@
 .jumbotron {
     background-image: url('/assets/Slide1');
 }
+
+.article-title {
+    color: red !important;
+    font-weight: bold;
+    font-size: 1.5em;
+    padding: 5px;
+}
+
+.article-title a:hover {
+    color:  red !important;
+    text-decoration: none;
+}
+
+.article-title a:active {
+    color:  black !important;
+}
+
+
+.articleTitleCustom {
+    color:  black;
+}
+
+.article-body {
+    border-top: 1px solid #eaeaea;
+    padding: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
 @import "~bootstrap/scss/bootstrap"; // never forget the semicolon at the end
 
