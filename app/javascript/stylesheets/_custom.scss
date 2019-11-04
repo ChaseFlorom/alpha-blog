@@ -22,5 +22,11 @@
 #errorHeader {
     font-size: 1.5em;
 }
+
+.article-actions {
+    border-top: 1px solid #eaeaea;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
 @import "~bootstrap/scss/bootstrap"; // never forget the semicolon at the end
 
