@@ -1,4 +1,24 @@
 
+#logo {
+    float: left;
+    font-size: 1.7em;
+    color: teal;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+.jumbotron {
+ background-image: asset-url("Slide1.jpg") !important;
+  background-size: cover; 
+  width: 100%;
+  height: 100%; }
+
+ body {
+     background-image: asset-url("Slide1.jpg") !important;
+ }
+
+
 
 @import "~bootstrap/scss/bootstrap"; // never forget the semicolon at the end
 @import "./_custom";
