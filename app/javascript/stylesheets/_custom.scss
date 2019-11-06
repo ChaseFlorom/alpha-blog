@@ -29,7 +29,10 @@
     padding-bottom: 20px;
 }
 .jumbotron {
-    background-image: url('/assets/Slide1');
+    background-image: url('../../assets/images/Slide1.jpg');
+    background-size: cover;
+    height: 550px;
+    margin-top: 20px;
 }
 
 .article-title {
