@@ -9,10 +9,11 @@ class ArticlesController < ApplicationController
     end
   
     def create
+        
         #render plain: params[:article].inspect
         @article = Article.new(article_params)
         @article.save
-        
+        @article.user = User.first
         #Checking to make sure validations go through
         if @article.save 
             flash[:success] = "The article was successfully submitted."
