@@ -1,5 +1,12 @@
 <h1 align = "center">All Alpha Bloggers</h1>
 
+<div class = "col-md-6 offset-md-5" align = "center">
+    <div align = "center">
+         <%= will_paginate @clients, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+    </div>
+</div>
+
+
 <%= @users.each do |user| %>
     <ul class = "listing">
         <div class = "row">
@@ -11,3 +18,9 @@
         </div>
     </ul>
 <%end%>
+
+<div class = "col-md-6 offset-md-5" align = "center">
+    <div align = "center">
+         <%= will_paginate @clients, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+    </div>
+</div>
