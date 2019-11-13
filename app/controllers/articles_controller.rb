@@ -1,8 +1,13 @@
 class ArticlesController < ApplicationController
-   def index
+
+    before_action :require_user, except: [:show, :index]
+    before_action :require_same_user, only:[:edit,:update,:destroy]
+    
+    
+    def index
        @articles = Article.paginate(page: params[:page], per_page: 5)
        
-   end
+    end
    
     def new
         @article = Article.new
@@ -52,8 +57,16 @@ class ArticlesController < ApplicationController
     end
     
     private 
-    def article_params
+    def article
+        _params
         params.require(:article).permit(:title, :description)
     end
-    
+    def require_same_user
+        @article = Article.find(params[:id])
+        if current_user != @article.user
+           flash["danger"] = "You do not have the required permissions to do that."
+           redirect_to root_path
+        end
+    end
+
 end
