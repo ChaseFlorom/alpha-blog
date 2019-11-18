@@ -63,7 +63,7 @@ class ArticlesController < ApplicationController
     end
     def require_same_user
         @article = Article.find(params[:id])
-        if current_user != @article.user
+        if current_user != @article.user and !current_user.admin?
            flash["danger"] = "You do not have the required permissions to do that."
            redirect_to root_path
         end
