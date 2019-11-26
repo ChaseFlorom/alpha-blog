@@ -16,6 +16,9 @@
             </div>
     </ul>
     <%end%>
+    <%if @article.categories.any?%>
+        <p>Categories: <%= render @article.categories%></p>
+    <%end%>
     <h4 align="center"><strong>Description:</strong></h4>
     <hr>
     <%= simple_format(@article.description)%>

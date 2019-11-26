@@ -8,7 +8,8 @@ class CategoriesController < ApplicationController
         @category = Category.new
     end
     def show
-        
+        @category = Category.find(params[:id])
+        @category_articles = @category.articles.paginate(page: params[:page], per_page: 5)
     end
     def create
         @category = Category.new(category_params)

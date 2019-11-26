@@ -5,6 +5,9 @@
                 <div class="article-title">
                     <%= link_to article.title, article_path(article), class: "articleTitleCustom" %>
                 </div>
+                <%if article.categories.any? %>
+                    <p>Categories: <%= render article.categories%></p>
+                <%end%>
                 <div class="article-body">
                     <%= truncate(article.description, length: 100) %>
                     <div class = "article-meta-details">
@@ -15,6 +18,7 @@
                     
                                          
                 </div>
+
                 <% if logged_in? && (current_user == article.user || current_user.admin?) %>
                     <div class="article-actions">
                         <%= link_to "Edit this Article", edit_article_path(article), class: "btn btn-sm btn-primary" %>

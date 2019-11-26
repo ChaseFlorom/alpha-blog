@@ -1,0 +1,12 @@
+<h1 align = "center"><%= "Category " + @category.name %></h1>
+<div class = "col-md-6 offset-md-5" align = "center">
+    <div align = "center">
+         <%= will_paginate @category_articles, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+    </div>
+</div>
+<%= render 'articles/article', obj: @category_articles %>
+<div class = "col-md-6 offset-md-5" align = "center">
+    <div align = "center">
+         <%= will_paginate @category_articles, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+    </div>
+</div>
