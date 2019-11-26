@@ -26,6 +26,13 @@
                <%= f.text_area :description, rows: 10, class:"form-control", placeholder: "Body of article" %>
             </div>
                 
+             <div class="form-group"  id="dropdown">
+                    <div class="col-sm-offset-2 col-sm-10">
+                         <%= f.collection_check_boxes :category_ids, Category.all, :id, :name, {:item_wrapper_class => 'checkbox_container'} do |cb| %>
+                             <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text} %>
+                         <%end%>
+                    </div>
+            </div>            
             
             <div class="form-group" id="submitbutton">
                 <div class="col-sm-offset-2 col-sm-10">
